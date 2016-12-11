@@ -16,7 +16,7 @@ public class CannonLaunch : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        rb.AddForce(0,0,thrust);
+        rb.AddForce(0,thrust/10,thrust, ForceMode.Impulse);
 
     }
 }
