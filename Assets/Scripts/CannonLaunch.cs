@@ -22,7 +22,7 @@ public class CannonLaunch : MonoBehaviour {
 
         Vector3 forward = vrHead.TransformDirection(Vector3.forward); // Thanks to https://www.youtube.com/watch?v=JmgOeQ3Gric for the help on this one
 
-        if (!inMotion) { transform.position = vrHead.position + forward * 2; }
+        if (!inMotion) { transform.position = vrHead.position + forward * 3; }
 
         // if (GvrViewer.Instance.VRModeEnabled && GvrViewer.Instance.Triggered)
         if (Input.GetButtonDown("Fire1") && !inMotion)

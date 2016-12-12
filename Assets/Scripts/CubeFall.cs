@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class CubeFall : MonoBehaviour {
 
     public GameObject[] ScoredBlocks;
     public Rigidbody rb;
+    public Text VRScoreTxt;
 
     private int count; // Current Score
 
@@ -18,15 +20,15 @@ public class CubeFall : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+        VRScoreTxt.text = "Score: " + count;
+    }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("ScoreBlock"))
         {
             other.gameObject.SetActive(false);
-            count += 1;
+            count += 1;            
             Debug.Log(count);
         }
     }
