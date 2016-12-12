@@ -10,7 +10,7 @@ public class CameraControl : MonoBehaviour {
     // Use this for initialization
     void Start () {
         offset = transform.position - projectile.transform.position;
-    }
+}
 	
 	// Update is called once per frame
 	void Update () {
@@ -22,7 +22,7 @@ public class CameraControl : MonoBehaviour {
         if (inMotion) { transform.position = projectile.transform.position + offset; }
         else if (projectileReset) {
             offset = transform.position - projectile.transform.position;
-            transform.position = new Vector3(0, 10, -9);
+            transform.position = new Vector3(0, 10, -15);
         }
     }
 }
