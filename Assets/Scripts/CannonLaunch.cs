@@ -46,7 +46,7 @@ public class CannonLaunch : MonoBehaviour {
             projectileReset = false;
         }
 
-        if (transform.position.y < 0) {
+        else if (transform.position.y < 0 || (Input.GetButtonDown("Fire1") && inMotion)) {
 
             transform.position = new Vector3(0, 10, -20);
             rb.isKinematic = true;
