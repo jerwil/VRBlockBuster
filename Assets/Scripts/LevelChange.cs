@@ -4,7 +4,7 @@ using System.Collections;
 public class LevelChange : MonoBehaviour {
 
     private GameObject[] OldBlocks;
-    const int numberOfLevels = 5;
+    const int numberOfLevels = 7;
     public GameObject[] Levels = new GameObject[numberOfLevels];
     public int level = 3;
     private int lastlevel = -1;

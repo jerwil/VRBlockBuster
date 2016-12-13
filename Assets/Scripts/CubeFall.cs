@@ -26,8 +26,8 @@ public class CubeFall : MonoBehaviour {
         int ammo = projectile.GetComponent<CannonLaunch>().ammo;
         GameObject levelsystem = GameObject.Find("LevelSwitchSystem");
         int level = levelsystem.GetComponent<LevelChange>().level;
-        VRScoreTxt.text = "Score: " + count +"/100" + " Ammo: " + ammo + " Level: " + level;
-        if (count >= 100) {
+        VRScoreTxt.text = "Score: " + count +"/200" + " Ammo: " + ammo + " Level: " + level;
+        if (count >= 200) {
             projectile.GetComponent<CannonLaunch>().projectileMode = 1;
             VRScoreTxt.text += "      Missile Mode!";
         }
